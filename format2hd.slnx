@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="format2hd.Check/format2hd.Check.csproj" />
+  <Project Path="format2hd.Core/format2hd.Core.csproj" />
+  <Project Path="format2hd/format2hd.csproj" />
+</Solution>
