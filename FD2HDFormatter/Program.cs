@@ -1,4 +1,4 @@
-namespace Format2hd;
+namespace FD2HDFormatter;
 
 static class Program
 {

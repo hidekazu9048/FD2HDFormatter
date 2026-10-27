@@ -1,4 +1,4 @@
-namespace Format2hd.Core;
+namespace FD2HDFormatter.Core;
 
 /// <summary>2HD のフォーマット形式。どれも両面・1 クラスタ＝1 セクタ・FAT12・FAT 2 個。</summary>
 public sealed class DiskFormat

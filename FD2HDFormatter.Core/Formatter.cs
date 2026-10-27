@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace Format2hd.Core;
+namespace FD2HDFormatter.Core;
 
 public sealed record BadSector(int Lba, int Cylinder, int Head, int R, string Error);
 

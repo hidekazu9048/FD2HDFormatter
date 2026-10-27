@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Format2hd.Core;
+namespace FD2HDFormatter.Core;
 
 /// <summary>FAT12 のシステム領域（ブートセクタ・FAT×2・ルートディレクトリ）を組み立てる。</summary>
 public static class FatBuilder

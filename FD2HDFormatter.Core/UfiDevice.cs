@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.Win32.SafeHandles;
 
-namespace Format2hd.Core;
+namespace FD2HDFormatter.Core;
 
 /// <summary>UFI コマンドが CHECK CONDITION で終わった。</summary>
 public sealed class UfiException(string command, int senseKey, int asc, int ascq)

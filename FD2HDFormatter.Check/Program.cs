@@ -1,12 +1,12 @@
 using System.Diagnostics;
 using System.Text;
-using Format2hd.Core;
+using FD2HDFormatter.Core;
 
 // フォーマット処理を実機の代わりにイメージ（メモリ上のディスク）へ流し、出来た FAT12 を検査する。
-// 使い方：format2hd.Check <出力フォルダ> [7z.exe のパス]
+// 使い方：FD2HDFormatter.Check <出力フォルダ> [7z.exe のパス]
 if (args.Length < 1)
 {
-    Console.Error.WriteLine("使い方：format2hd.Check <出力フォルダ> [7z.exe のパス]");
+    Console.Error.WriteLine("使い方：FD2HDFormatter.Check <出力フォルダ> [7z.exe のパス]");
     return 2;
 }
 Console.OutputEncoding = Encoding.UTF8;

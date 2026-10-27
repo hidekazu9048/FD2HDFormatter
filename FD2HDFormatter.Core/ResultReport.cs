@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Format2hd.Core;
+namespace FD2HDFormatter.Core;
 
 /// <summary>結果欄に出す文面（MS-DOS の FORMAT の表示に寄せる）。</summary>
 public static class ResultReport

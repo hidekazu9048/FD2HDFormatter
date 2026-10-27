@@ -1,4 +1,4 @@
-namespace Format2hd;
+namespace FD2HDFormatter;
 
 partial class MainForm
 {
@@ -230,7 +230,7 @@ partial class MainForm
         MinimumSize = new Size(560, 520);
         Name = "MainForm";
         StartPosition = FormStartPosition.CenterScreen;
-        Text = "format2hd";
+        Text = "FD2HDFormatter";
         FormClosing += MainForm_FormClosing;
         grpFormat.ResumeLayout(false);
         grpFormat.PerformLayout();

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="FD2HDFormatter.Check/FD2HDFormatter.Check.csproj" />
+  <Project Path="FD2HDFormatter.Core/FD2HDFormatter.Core.csproj" />
+  <Project Path="FD2HDFormatter/FD2HDFormatter.csproj" />
+</Solution>

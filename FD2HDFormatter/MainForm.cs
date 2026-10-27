@@ -1,7 +1,7 @@
 using System.Reflection;
-using Format2hd.Core;
+using FD2HDFormatter.Core;
 
-namespace Format2hd;
+namespace FD2HDFormatter;
 
 public partial class MainForm : Form
 {
@@ -12,7 +12,7 @@ public partial class MainForm : Form
         InitializeComponent();
         Icon = Program.AppIcon;
         var version = Assembly.GetExecutingAssembly().GetName().Version!;
-        Text = $"format2hd {version.ToString(3)} - フロッピーディスクフォーマッタ（IBM PC / PC-98 2HD）";
+        Text = $"FD2HDFormatter {version.ToString(3)} - フロッピーディスクフォーマッタ（IBM PC / PC-98 2HD）";
         RefreshDrives();
     }
 
@@ -104,19 +104,19 @@ public partial class MainForm : Form
             {
                 ShowStatus("失敗しました", Color.Firebrick);
                 lblProgress.Text = "フォーマットに失敗しました。";
-                MessageBox.Show(this, $"フォーマットに失敗しました。\n\n{result.Failure}", "format2hd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, $"フォーマットに失敗しました。\n\n{result.Failure}", "FD2HDFormatter", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (result.BadSectors.Count > 0)
             {
                 ShowStatus($"完了しました（不良セクタ {result.BadSectors.Count} 個・{result.BadBytes:N0} バイトを使用不可に登録）", Color.DarkOrange);
                 MessageBox.Show(this, $"完了しました。\n\n不良セクタが {result.BadSectors.Count} 個ありました。\n{result.BadBytes:N0} バイトを使用不可として登録し、{result.AvailableBytes:N0} バイトが使えます。",
-                    "format2hd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "FD2HDFormatter", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 ShowStatus("完了しました（不良セクタなし）", Color.ForestGreen);
                 MessageBox.Show(this, $"完了しました。\n\n不良セクタはありません。{result.AvailableBytes:N0} バイトが使えます。",
-                    "format2hd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "FD2HDFormatter", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         catch (OperationCanceledException)
@@ -129,7 +129,7 @@ public partial class MainForm : Form
             ShowStatus("失敗しました", Color.Firebrick);
             lblProgress.Text = "フォーマットに失敗しました。";
             txtResult.Text = $"ドライブ        {drive}:{Environment.NewLine}形式            {format.Name}（{format.Geometry}）{Environment.NewLine}失敗の理由      {ex.Message}";
-            MessageBox.Show(this, $"フォーマットに失敗しました。\n\n{ex.Message}", "format2hd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(this, $"フォーマットに失敗しました。\n\n{ex.Message}", "FD2HDFormatter", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         finally
         {
@@ -143,7 +143,7 @@ public partial class MainForm : Form
     {
         if (_cancel != null)
         {
-            MessageBox.Show(this, "フォーマット中です。中止してから閉じてください。", "format2hd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(this, "フォーマット中です。中止してから閉じてください。", "FD2HDFormatter", MessageBoxButtons.OK, MessageBoxIcon.Information);
             e.Cancel = true;
         }
     }
